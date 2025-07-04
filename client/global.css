@@ -1,0 +1,247 @@
+@import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@300;400;500;600;700&family=IBM+Plex+Mono:wght@300;400;500;600;700&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  /**
+   * Tailwind CSS theme
+   * tailwind.config.ts expects the following color variables to be expressed as HSL values.
+   * A different format will require also updating the theme in tailwind.config.ts.
+  */
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 222.2 84% 4.9%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 222.2 84% 4.9%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 222.2 84% 4.9%;
+
+    --primary: 222.2 47.4% 11.2%;
+    --primary-foreground: 210 40% 98%;
+
+    --secondary: 210 40% 96.1%;
+    --secondary-foreground: 222.2 47.4% 11.2%;
+
+    --muted: 210 40% 96.1%;
+    --muted-foreground: 215.4 16.3% 46.9%;
+
+    --accent: 210 40% 96.1%;
+    --accent-foreground: 222.2 47.4% 11.2%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 214.3 31.8% 91.4%;
+    --input: 214.3 31.8% 91.4%;
+    --ring: 222.2 84% 4.9%;
+
+    --radius: 0.5rem;
+
+    /* Vigilum color system */
+    --vigilum-bg: 217 28% 6%; /* #0F121A */
+    --vigilum-label: 223 13% 69%; /* #AAB0BF */
+    --vigilum-subheadline: 223 14% 83%; /* #D0D4DB */
+    --vigilum-body: 225 22% 97%; /* #F5F7FA */
+    --vigilum-blue: 222 100% 59%; /* #316EFF */
+
+    --sidebar-background: 0 0% 98%;
+
+    --sidebar-foreground: 240 5.3% 26.1%;
+
+    --sidebar-primary: 240 5.9% 10%;
+
+    --sidebar-primary-foreground: 0 0% 98%;
+
+    --sidebar-accent: 240 4.8% 95.9%;
+
+    --sidebar-accent-foreground: 240 5.9% 10%;
+
+    --sidebar-border: 220 13% 91%;
+
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+
+  .dark {
+    --background: var(--vigilum-bg);
+    --foreground: var(--vigilum-body);
+
+    --card: var(--vigilum-bg);
+    --card-foreground: var(--vigilum-body);
+
+    --popover: var(--vigilum-bg);
+    --popover-foreground: var(--vigilum-body);
+
+    --primary: var(--vigilum-blue);
+    --primary-foreground: var(--vigilum-body);
+
+    --secondary: 217.2 32.6% 17.5%;
+    --secondary-foreground: var(--vigilum-body);
+
+    --muted: 217.2 32.6% 17.5%;
+    --muted-foreground: var(--vigilum-label);
+
+    --accent: 217.2 32.6% 17.5%;
+    --accent-foreground: var(--vigilum-body);
+
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: var(--vigilum-body);
+
+    --border: 217.2 32.6% 17.5%;
+    --input: 217.2 32.6% 17.5%;
+    --ring: var(--vigilum-blue);
+    --sidebar-background: 240 5.9% 10%;
+    --sidebar-foreground: 240 4.8% 95.9%;
+    --sidebar-primary: 224.3 76.3% 48%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 240 3.7% 15.9%;
+    --sidebar-accent-foreground: 240 4.8% 95.9%;
+    --sidebar-border: 240 3.7% 15.9%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    font-family:
+      "IBM Plex Sans",
+      system-ui,
+      -apple-system,
+      sans-serif;
+  }
+}
+
+@layer utilities {
+  .font-plex-sans {
+    font-family:
+      "IBM Plex Sans",
+      system-ui,
+      -apple-system,
+      sans-serif;
+  }
+
+  .font-plex-mono {
+    font-family: "IBM Plex Mono", "Consolas", "Monaco", monospace;
+  }
+
+  .text-vigilum-label {
+    color: hsl(var(--vigilum-label));
+  }
+
+  .text-vigilum-subheadline {
+    color: hsl(var(--vigilum-subheadline));
+  }
+
+  .text-vigilum-body {
+    color: hsl(var(--vigilum-body));
+  }
+
+  .bg-vigilum {
+    background-color: hsl(var(--vigilum-bg));
+  }
+
+  .text-vigilum-blue {
+    color: hsl(var(--vigilum-blue));
+  }
+
+  .bg-vigilum-blue {
+    background-color: hsl(var(--vigilum-blue));
+  }
+}
+
+/* Scroll-based line reveals */
+@keyframes scroll-reveal {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.scroll-reveal-0 {
+  animation: scroll-reveal 0.5s ease-in-out forwards;
+  animation-delay: 0s;
+}
+
+.scroll-reveal-1 {
+  opacity: 0;
+  animation: scroll-reveal 0.8s ease-in-out forwards;
+  animation-delay: 0.5s;
+}
+
+.scroll-reveal-2 {
+  opacity: 0;
+  animation: scroll-reveal 1s ease-in-out forwards;
+  animation-delay: 1.2s;
+}
+
+/* 3D Network Background Animations */
+@keyframes float-1 {
+  0% {
+    transform: translate3d(0, 0, 0);
+    opacity: 0.6;
+  }
+  25% {
+    transform: translate3d(100px, -50px, 20px);
+    opacity: 0.8;
+  }
+  50% {
+    transform: translate3d(50px, 100px, -10px);
+    opacity: 0.4;
+  }
+  75% {
+    transform: translate3d(-50px, -25px, 15px);
+    opacity: 0.7;
+  }
+  100% {
+    transform: translate3d(0, 0, 0);
+    opacity: 0.6;
+  }
+}
+
+@keyframes float-2 {
+  0% {
+    transform: translate3d(0, 0, 0);
+    opacity: 0.4;
+  }
+  33% {
+    transform: translate3d(-75px, 80px, 25px);
+    opacity: 0.6;
+  }
+  66% {
+    transform: translate3d(80px, -40px, -15px);
+    opacity: 0.3;
+  }
+  100% {
+    transform: translate3d(0, 0, 0);
+    opacity: 0.4;
+  }
+}
+
+@keyframes float-3 {
+  0% {
+    transform: translate3d(0, 0, 0);
+    opacity: 0.3;
+  }
+  40% {
+    transform: translate3d(60px, -80px, 30px);
+    opacity: 0.5;
+  }
+  80% {
+    transform: translate3d(-90px, 20px, -20px);
+    opacity: 0.2;
+  }
+  100% {
+    transform: translate3d(0, 0, 0);
+    opacity: 0.3;
+  }
+}
