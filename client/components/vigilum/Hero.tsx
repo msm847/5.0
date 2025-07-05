@@ -45,7 +45,10 @@ const Hero = () => {
   }, []);
 
   return (
-    <div className="relative bg-gray-900 pt-24 pb-16 overflow-hidden">
+    <div
+      className="relative pt-24 pb-16 overflow-hidden"
+      style={{ backgroundColor: "#0B1E16" }}
+    >
       {/* Background Pattern */}
       <div className="absolute inset-0 opacity-10">
         <div className="absolute inset-0 bg-gradient-to-br from-blue-500/20 via-transparent to-yellow-500/20" />
@@ -58,12 +61,6 @@ const Hero = () => {
             {/* Left Column - Content */}
             <div>
               <div className="mb-6">
-                <div className="inline-flex items-center space-x-2 bg-gray-800 px-3 py-1 rounded-full border border-gray-700 mb-4">
-                  <Activity className="w-3 h-3 text-green-400" />
-                  <span className="text-xs text-gray-300 font-mono uppercase tracking-wider">
-                    Structural Analysis Active
-                  </span>
-                </div>
                 <h1 className="text-5xl lg:text-6xl font-bold tracking-tighter text-white mb-6">
                   LEGAL BEHAVIOR
                   <span className="block text-blue-400">SIMULATION</span>
@@ -79,20 +76,10 @@ const Hero = () => {
               </div>
 
               <div className="flex flex-col sm:flex-row gap-4 mb-8">
-                <a href="#demo">
-                  <Button
-                    size="lg"
-                    className="bg-blue-600 hover:bg-blue-500 text-white font-mono px-8 py-4 border border-blue-500"
-                  >
-                    ANALYZE STRUCTURE
-                    <ArrowRight className="ml-2 h-5 w-5" />
-                  </Button>
-                </a>
                 <a href="#modules">
                   <Button
                     size="lg"
-                    variant="outline"
-                    className="border-gray-600 text-gray-300 hover:bg-gray-800 font-mono px-8 py-4"
+                    className="bg-blue-600 hover:bg-blue-500 text-white font-mono px-8 py-4 border border-blue-500"
                   >
                     VIEW MODULES
                   </Button>

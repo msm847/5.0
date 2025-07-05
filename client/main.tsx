@@ -9,6 +9,13 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Index from "./pages/Index";
 import VigilumPage from "./pages/Vigilum";
 import NotFound from "./pages/NotFound";
+import CLAVISModulePage from "./pages/modules/CLAVISModule";
+import OBSCURAModulePage from "./pages/modules/OBSCURAModule";
+import NULLUMModulePage from "./pages/modules/NULLUMModule";
+import NEXUSPOTENTIAModulePage from "./pages/modules/NEXUSPOTENTIAModule";
+import VIGILOCOREModulePage from "./pages/modules/VIGILOCOREModule";
+import VERISModulePage from "./pages/modules/VERISModule";
+import SENTIUMModulePage from "./pages/modules/SENTIUMModule";
 
 const queryClient = new QueryClient();
 
@@ -21,6 +28,19 @@ const App = () => (
         <Routes>
           <Route path="/" element={<Index />} />
           <Route path="/vigilum" element={<VigilumPage />} />
+          <Route path="/module/clavis" element={<CLAVISModulePage />} />
+          <Route path="/module/obscura" element={<OBSCURAModulePage />} />
+          <Route path="/module/nullum" element={<NULLUMModulePage />} />
+          <Route
+            path="/module/nexus-potentia"
+            element={<NEXUSPOTENTIAModulePage />}
+          />
+          <Route
+            path="/module/vigilo-core"
+            element={<VIGILOCOREModulePage />}
+          />
+          <Route path="/module/veris" element={<VERISModulePage />} />
+          <Route path="/module/sentium" element={<SENTIUMModulePage />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>

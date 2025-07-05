@@ -2,8 +2,8 @@ import { useEffect, useState } from "react";
 import { useLocation } from "react-router-dom";
 import Navigation from "@/components/vigilum/Navigation";
 import Hero from "@/components/vigilum/Hero";
-import ModulesGrid from "@/components/vigilum/ModulesGrid";
-import ClauseDemo from "@/components/vigilum/ClauseDemo";
+import ModuleGrid from "@/components/vigilum/ModuleGrid";
+import CLAVISModule from "@/components/vigilum/CLAVISModule";
 import UseCases from "@/components/vigilum/UseCases";
 import AboutSection from "@/components/vigilum/AboutSection";
 import Newsletter from "@/components/vigilum/Newsletter";
@@ -31,14 +31,19 @@ const VigilumPage = () => {
   }, [location]);
 
   return (
-    <div className="min-h-screen bg-gray-900 text-gray-100 font-mono">
+    <div
+      className="min-h-screen text-gray-100 font-mono"
+      style={{
+        background: "radial-gradient(circle, #0B1E16 0%, #050D0A 100%)",
+      }}
+    >
       <Navigation />
       <Hero />
       <div id="modules">
-        <ModulesGrid />
+        <ModuleGrid />
       </div>
       <div id="demo">
-        <ClauseDemo />
+        <CLAVISModule />
       </div>
       <div id="cases">
         <UseCases />

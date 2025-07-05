@@ -66,7 +66,7 @@ const Newsletter = () => {
   };
 
   return (
-    <div className="bg-gray-900 py-20">
+    <div className="py-20" style={{ backgroundColor: "#0B1E16" }}>
       <div className="container mx-auto px-4">
         <div className="max-w-6xl mx-auto">
           {/* Section Header */}
@@ -94,7 +94,18 @@ const Newsletter = () => {
               return (
                 <div
                   key={audience.id}
-                  className="bg-gray-800 border border-gray-700 rounded-lg p-6 hover:border-green-500 transition-all duration-300"
+                  className="rounded-lg p-6 transition-all duration-300 border"
+                  style={{
+                    backgroundColor: "rgba(12, 35, 28, 0.85)",
+                    borderColor: "rgba(0,255,204,0.06)",
+                    boxShadow: "inset 0 0 0 1px rgba(255,255,255,0.03)",
+                  }}
+                  onMouseEnter={(e) => {
+                    e.target.style.borderColor = "rgba(34, 197, 94, 0.5)";
+                  }}
+                  onMouseLeave={(e) => {
+                    e.target.style.borderColor = "rgba(0,255,204,0.06)";
+                  }}
                 >
                   <div className="flex items-center space-x-3 mb-4">
                     <div className="w-12 h-12 bg-green-600 rounded-lg flex items-center justify-center">
@@ -127,7 +138,14 @@ const Newsletter = () => {
 
           {/* Subscription Form */}
           <div className="max-w-2xl mx-auto">
-            <div className="bg-gray-800 border border-gray-700 rounded-lg p-8">
+            <div
+              className="rounded-lg p-8 border"
+              style={{
+                backgroundColor: "#102c22",
+                borderColor: "rgba(0,255,204,0.06)",
+                boxShadow: "inset 0 0 0 1px rgba(255,255,255,0.03)",
+              }}
+            >
               {!isSubmitted ? (
                 <form onSubmit={handleSubmit} className="space-y-6">
                   <div className="text-center mb-6">
@@ -151,11 +169,30 @@ const Newsletter = () => {
                           key={audience.id}
                           type="button"
                           onClick={() => setRole(audience.id)}
-                          className={`p-3 rounded-lg border text-sm font-mono transition-all duration-300 ${
-                            role === audience.id
-                              ? "border-green-500 bg-green-900/20 text-green-400"
-                              : "border-gray-600 text-gray-400 hover:border-gray-500"
-                          }`}
+                          className="p-3 rounded-lg border text-sm font-mono transition-all duration-300"
+                          style={{
+                            backgroundColor:
+                              role === audience.id
+                                ? "rgba(34, 197, 94, 0.1)"
+                                : "rgba(12, 35, 28, 0.5)",
+                            borderColor:
+                              role === audience.id
+                                ? "rgba(34, 197, 94, 0.5)"
+                                : "rgba(0,255,204,0.15)",
+                            color: role === audience.id ? "#22c55e" : "#9ca3af",
+                          }}
+                          onMouseEnter={(e) => {
+                            if (role !== audience.id) {
+                              e.target.style.borderColor =
+                                "rgba(0,255,204,0.3)";
+                            }
+                          }}
+                          onMouseLeave={(e) => {
+                            if (role !== audience.id) {
+                              e.target.style.borderColor =
+                                "rgba(0,255,204,0.15)";
+                            }
+                          }}
                         >
                           {audience.title.toUpperCase()}
                         </button>

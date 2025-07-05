@@ -42,7 +42,7 @@ const AboutSection = () => {
   }, []);
 
   return (
-    <div className="bg-gray-800 py-20">
+    <div className="py-20" style={{ backgroundColor: "#0B1E16" }}>
       <div className="container mx-auto px-4">
         <div className="max-w-6xl mx-auto">
           {/* Section Header */}
@@ -65,7 +65,14 @@ const AboutSection = () => {
 
           {/* Core Principles */}
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-16">
-            <div className="bg-gray-900 border border-gray-700 rounded-lg p-8">
+            <div
+              className="rounded-lg p-8 border"
+              style={{
+                backgroundColor: "#102c22",
+                borderColor: "rgba(0,255,204,0.06)",
+                boxShadow: "inset 0 0 0 1px rgba(255,255,255,0.03)",
+              }}
+            >
               <h3 className="text-2xl font-bold text-white font-mono mb-6">
                 DETECTION PRINCIPLES
               </h3>
@@ -102,7 +109,14 @@ const AboutSection = () => {
               </div>
             </div>
 
-            <div className="bg-gray-900 border border-gray-700 rounded-lg p-8">
+            <div
+              className="rounded-lg p-8 border"
+              style={{
+                backgroundColor: "#102c22",
+                borderColor: "rgba(0,255,204,0.06)",
+                boxShadow: "inset 0 0 0 1px rgba(255,255,255,0.03)",
+              }}
+            >
               <h3 className="text-2xl font-bold text-white font-mono mb-6">
                 SEMANTIC ANALYSIS
               </h3>
@@ -237,7 +251,14 @@ const AboutSection = () => {
 
           {/* Technical Architecture */}
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-16">
-            <div className="bg-gray-900 border border-gray-700 rounded-lg p-8">
+            <div
+              className="rounded-lg p-8 border"
+              style={{
+                backgroundColor: "#102c22",
+                borderColor: "rgba(0,255,204,0.06)",
+                boxShadow: "inset 0 0 0 1px rgba(255,255,255,0.03)",
+              }}
+            >
               <div className="flex items-center space-x-3 mb-6">
                 <Code className="w-6 h-6 text-blue-400" />
                 <h3 className="text-xl font-bold text-white font-mono">
@@ -280,7 +301,14 @@ const AboutSection = () => {
               </div>
             </div>
 
-            <div className="bg-gray-900 border border-gray-700 rounded-lg p-8">
+            <div
+              className="rounded-lg p-8 border"
+              style={{
+                backgroundColor: "#102c22",
+                borderColor: "rgba(0,255,204,0.06)",
+                boxShadow: "inset 0 0 0 1px rgba(255,255,255,0.03)",
+              }}
+            >
               <div className="flex items-center space-x-3 mb-6">
                 <Network className="w-6 h-6 text-purple-400" />
                 <h3 className="text-xl font-bold text-white font-mono">

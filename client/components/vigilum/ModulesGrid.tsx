@@ -91,7 +91,7 @@ const ModulesGrid = () => {
   }, []);
 
   return (
-    <div className="bg-gray-900 py-20">
+    <div className="py-20" style={{ backgroundColor: "#0B1E16" }}>
       <div className="container mx-auto px-4">
         <div className="max-w-6xl mx-auto">
           {/* Section Header */}
@@ -263,9 +263,12 @@ const ModulesGrid = () => {
                 </div>
               </div>
               <div className="text-center">
-                <Database className="w-8 h-8 text-orange-400 mx-auto mb-3" />
+                <Database
+                  className="w-8 h-8 mx-auto mb-3"
+                  style={{ color: "rgb(248,113,113)" }}
+                />
                 <div className="text-lg font-bold text-white font-mono">
-                  BEHAVIORAL
+                  <p>REASONING</p>
                 </div>
                 <div className="text-sm text-gray-400">
                   Legal behavior simulation engine

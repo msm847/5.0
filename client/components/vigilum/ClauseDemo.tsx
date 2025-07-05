@@ -94,8 +94,8 @@ const ClauseDemo = () => {
               PRIMARY COGNITION TEST
             </h2>
             <p className="text-xl text-gray-400 font-light max-w-3xl mx-auto">
-              Input legal text → Vector projection → Override mapping → Risk
-              fingerprint. Real-time structural analysis.
+              ϕ(c₁…cₙ) ⇨ ⊗(sequence logic) ⇨ G(override graph) ⇨ τ(typology
+              projection) ⇨ Λ(pattern flag). Real-time structural analysis.
             </p>
           </div>
 
@@ -310,11 +310,13 @@ const ClauseDemo = () => {
                   SEMANTIC ANALYSIS METHODOLOGY
                 </div>
                 <div className="text-sm text-gray-300 leading-relaxed">
-                  CLAVIS employs semantic vector decomposition to identify
-                  embedded override mechanisms in legal text. Risk typologies
-                  (DG, RT, CI, SB) represent different vectors of institutional
-                  failure. Output includes override pathways, similar loophole
-                  patterns, and behavioral simulation parameters.
+                  <p>
+                    CLAVIS employs semantic vector decomposition to identify
+                    embedded override mechanisms in legal text. Risk typologies
+                    represent different vectors of institutional failure. Output
+                    includes override pathways, similar loophole patterns, and
+                    behavioral simulation parameters.
+                  </p>
                 </div>
               </div>
             </div>
